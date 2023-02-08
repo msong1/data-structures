@@ -15,8 +15,8 @@ var Stack = function() {
 
   someInstance.pop = function() {
     // get the last key and value
-    var lastKey = String(Object.keys(storage).length - 1);
-    var lastValue = storage[lastKey];
+    var lastKey = Object.keys(storage).length - 1;
+    var lastValue = storage[lastKey]; // storage.lastkey does not work
     // remove the last element
     delete storage[lastKey];
     return lastValue;
@@ -28,9 +28,3 @@ var Stack = function() {
 
   return someInstance;
 };
-
-var st = Stack();
-st.push('x');
-st.push('y');
-st.pop();
-st.size();
