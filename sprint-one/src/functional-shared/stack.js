@@ -31,5 +31,3 @@ var stackMethods = {
 
 };
 
-var stack = Stack();
-
